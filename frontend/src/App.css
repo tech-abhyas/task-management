@@ -1,0 +1,22 @@
+.main-container {
+  background: #CDFADB;
+}
+
+.form-component {
+  background: #F6FDC3;
+  padding: 14px;
+  border-radius: 5px 5px;
+  box-shadow: 3px 4px 0px #c0c0c057;
+}
+
+.secondary-color {
+  background-color: #FFCF96 !important;
+}
+
+.primary-color {
+  background-color: #F6FDC3;
+}
+
+.secondary-color {
+  background-color: #FF8080 !important;
+}
