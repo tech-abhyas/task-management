@@ -33,7 +33,7 @@ function ResetPassword() {
     }
     // (If we found an eligible account associated with that username, we've sent password reset instructions to the primary email address on the account.)
     return (
-        <div className="form-component col-6">
+        <div className="form-component col-lg-6 col-md-12 col-sm-12 ">
             <h4 className="d-flex justify-content-center m-4 ">Reset Password </h4>
             <Formik
                 initialValues={initialValues}

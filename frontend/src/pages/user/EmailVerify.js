@@ -40,7 +40,7 @@ function EmailVerify() {
 
 
     return (
-        <div className="col-lg-8 my-3">
+        <div className="col-lg-8 col-md-12 col-sm-12  my-3">
             <div className="card p-4">
                 <h3>Email Verification : {loading === null && "Loading..."} {loading === true && "Done"} {loading === false && "Failed"}</h3>
                 <Link to="/login">Back to login</Link>

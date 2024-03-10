@@ -62,45 +62,48 @@ function TaskList() {
 
 
     return (
-        <div className="col-lg-12">
+        <div className="col-lg-12 col-md-12 col-sm-12 ">
             <div className="d-flex justify-content-end my-3">
                 <button className="btn secondary-color" aria-label="Add new task" onClick={() => taskHandler()}><i className="bi bi-plus" /></button>
             </div>
-            <table className="table table-hover primary-color">
-                <thead className="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Priority</th>
-                        <th scope="col">Start / End Date</th>
-                        <th scope="col"><></></th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    {tasks?.map((item, i) => (
+            <div className="overflow-auto">
+                <table className="table table-hover primary-color">
+                    <thead className="thead-dark">
                         <tr>
-                            <th scope="row">{i + 1}</th>
-                            <td>{item.task_name}</td>
-                            <td>{item.task_description}</td>
-                            <td><div className="text-center p-1" style={{ backgroundColor: item.category[0].color }}>{item.category[0].name.toUpperCase()}</div></td>
-                            <td>{item.priority[0].name.toUpperCase()}</td>
-                            <td>{dateFormat(item.start_date)} - {dateFormat(item.end_date)}
-                                <p className="text-danger">{checkIsBefore(dateFormat(item.end_date)) && 'Task Deadline Passed'}</p>
-                            </td>
-                            <td>
-                                <div className="d-flex justify-content-around">
-                                    <button className="btn  secondary-color btn-sm m-1" aria-label="Add new task" onClick={() => taskHandler(item)}><i className="bi bi-pencil" /></button>
-                                    <button className="btn btn-danger btn-sm m-1" aria-label="Add new task" onClick={() => deleteHandler(item._id)} ><i className="bi bi-trash-fill" /></button>
-                                </div>
-                            </td>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Priority</th>
+                            <th scope="col">Start / End Date</th>
+                            <th scope="col"><></></th>
+
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-            {tasks?.length === 0 && <div className="p-2 m-2 text-center"><h5>Add New Task</h5></div>}
+                    </thead>
+                    <tbody>
+                        {tasks?.map((item, i) => (
+                            <tr>
+                                <th scope="row">{i + 1}</th>
+                                <td>{item.task_name}</td>
+                                <td>{item.task_description}</td>
+                                <td><div className="text-center p-1" style={{ backgroundColor: item.category[0].color }}>{item.category[0].name.toUpperCase()}</div></td>
+                                <td>{item.priority[0].name.toUpperCase()}</td>
+                                <td>{dateFormat(item.start_date)} - {dateFormat(item.end_date)}
+                                    <p className="text-danger">{checkIsBefore(dateFormat(item.end_date)) && 'Task Deadline Passed'}</p>
+                                </td>
+                                <td>
+                                    <div className="d-flex justify-content-around">
+                                        <button className="btn  secondary-color btn-sm m-1" aria-label="Add new task" onClick={() => taskHandler(item)}><i className="bi bi-pencil" /></button>
+                                        <button className="btn btn-danger btn-sm m-1" aria-label="Add new task" onClick={() => deleteHandler(item._id)} ><i className="bi bi-trash-fill" /></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                {tasks?.length === 0 && <div className="p-2 m-2 text-center"><h5>Add New Task</h5></div>}
+            </div>
+
 
 
             {/* open / close form modal  */}

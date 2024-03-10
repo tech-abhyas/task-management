@@ -29,7 +29,7 @@ function UpdatePassword() {
     const onSubmit = (val) => {
 
         const data = { token: params.token, ...val }
-        // console.log("params", data)
+
         // call reset password request api and handle response / error
         authService.updatePassword(data).then(resp => {
             // console.log(resp)
@@ -40,9 +40,9 @@ function UpdatePassword() {
         })
 
     }
-    // If we found an eligible account associated with that username, we've sent password reset instructions to the primary email address on the account.
+
     return (
-        <div className="form-component col-6">
+        <div className="form-component col-lg-6 col-md-12 col-sm-12 ">
             <h4 className="d-flex justify-content-center m-4 ">Update Password </h4>
             <Formik
                 initialValues={initialValues}

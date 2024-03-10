@@ -33,7 +33,7 @@ function Register() {
     }
 
     return (
-        <div className="form-component col-6">
+        <div className="form-component col-lg-6 col-md-12 col-sm-12 ">
             <h4 className="d-flex justify-content-center m-4 ">Register </h4>
             <Formik
                 initialValues={initialValues}

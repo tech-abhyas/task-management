@@ -106,18 +106,18 @@ function CreateTask({ setOpenModal, editData }) {
                         >
                             {formik => (
                                 <Form className="row g-3">
-                                    <div className="col-12">
+                                    <div className="col-lg-12 col-md-12 col-sm-12 ">
                                         <label className="form-label">Task Name</label>
                                         <Field type="text" name="task_name" className="form-control" />
                                         <ErrorMessage name={"task_name"}>{msg => <p className="text-danger">{msg}</p>}</ErrorMessage>
                                     </div>
-                                    <div className="col-12">
+                                    <div className="col-lg-12 col-md-12 col-sm-12 ">
                                         <label className="form-label">Task Description</label>
                                         <Field type="text" name="task_description" className="form-control" />
                                         <ErrorMessage name={"task_description"}>{msg => <p className="text-danger">{msg}</p>}</ErrorMessage>
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-lg-6 col-md-12 col-sm-12 ">
                                         <label className="form-label">Category</label>
                                         <Field
                                             as="select"
@@ -138,7 +138,7 @@ function CreateTask({ setOpenModal, editData }) {
                                         </Field>
                                         <ErrorMessage name={"category_id"}>{msg => <p className="text-danger">{msg}</p>}</ErrorMessage>
                                     </div>
-                                    <div className="col-md-6">
+                                    <div className="col-lg-6 col-md-12 col-sm-12 ">
                                         <label className="form-label">Priority</label>
                                         <Field
                                             as="select"
@@ -160,20 +160,20 @@ function CreateTask({ setOpenModal, editData }) {
                                         <ErrorMessage name={"priority_id"}>{msg => <p className="text-danger">{msg}</p>}</ErrorMessage>
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-lg-6 col-md-12 col-sm-12 ">
                                         <label className="form-label">Start Date</label>
                                         <Field type="date" name="start_date" className="form-control" />
 
                                         <ErrorMessage name={"start_date"}>{msg => <p className="text-danger">{msg}</p>}</ErrorMessage>
                                     </div>
 
-                                    <div className="col-md-6">
+                                    <div className="col-lg-6 col-md-12 col-sm-12 ">
                                         <label className="form-label">End Date</label>
                                         <Field type="date" name="end_date" className="form-control" />
                                         <ErrorMessage name={"end_date"}>{msg => <p className="text-danger">{msg}</p>}</ErrorMessage>
                                     </div>
 
-                                    <div className="col-12">
+                                    <div className="col-lg-12 col-md-12 col-sm-12 ">
                                         <button type="submit" className="btn secondary-color btn-sm">Submit</button>
                                     </div>
                                 </Form>
